@@ -1,0 +1,13 @@
+<h1 class="main-title"><%= "Welcome to the restaurants app"%>
+
+<div class="container">
+<h2 class="task-list"><strong>Here are the restaurants:</strong></h2>
+
+  <ul class="list">
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
